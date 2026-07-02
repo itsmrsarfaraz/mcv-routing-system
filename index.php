@@ -1,5 +1,9 @@
 <?php
 
+include 'Router.php';
+include 'Controller.php';
+include 'UserController.php';
+
 // 1. Initialize the Router
 $router = new Router();
 
@@ -7,10 +11,10 @@ $router = new Router();
 $router->add('/profile', UserController::class, 'profile');
 
 // 3. Simulate incoming HTTP requests
-echo "Simulating request to '/profile':\n";
+echo "Simulating request to '/profile':<br>";
 $router->dispatch('/profile'); 
 
-echo "\n-----------------------------------\n\n";
+echo "<br>-----------------------------------<br><br>";
 
-echo "Simulating request to '/dashboard' (unregistered):\n";
+echo "Simulating request to '/dashboard' (unregistered):<br>";
 $router->dispatch('/dashboard');

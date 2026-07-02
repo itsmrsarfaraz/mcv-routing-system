@@ -5,10 +5,10 @@ abstract class Controller {
     protected function render(string $view, array $data = []): void {
         extract($data); // Turns ['name' => 'John'] into $name
         
-        echo "--- Rendering View: [$view] ---\n";
+        echo "--- Rendering View: [$view] ---<br>";
         // In a full app, you would include a file here: include "views/$view.php";
         if (isset($user)) {
-            echo "Welcome back, " . htmlspecialchars($user) . "!\n";
+            echo "Welcome back, " . htmlspecialchars($user) . "!<br>";
         }
     }
 }
